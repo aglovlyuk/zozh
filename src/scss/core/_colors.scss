@@ -1,0 +1,42 @@
+// Brand colors
+$cr-brand-primary:          #ff787b;
+$cr-brand-primary-alt:      #ff6bbf;
+$cr-brand-secondary:        #a53b62;
+$cr-brand-tertiary:         #ffbb0d;
+$cr-danger:                 #fa6e36;
+$cr-warning:                #ffc826;
+$cr-success:                #00bf96;
+$cr-info:                   #ff5724;
+$cr-link:                   $cr-danger;
+$cr-gray:                   #666;
+$cr-heading:                #8f8f8f;
+
+// background colors
+$bg-color-primary:          #fff;
+$diagonal-gradient:         linear-gradient(135deg, $cr-brand-primary 0%, $cr-brand-primary-alt 100%);
+$bg-color-secondary:        $diagonal-gradient;
+
+// font colors
+$font-cr-primary:           $cr-gray;
+$font-cr-secondary:         $cr-brand-secondary;
+$font-cr-tertiary:          #fff;
+
+// link colors
+$link-cr-font:              $cr-brand-primary;
+
+// button colors
+$btn-cr-font:               #fff;
+
+// border colors
+$border-cr:                 rgba(32, 38, 40, 0.1);
+$form-border-color:         rgba(#fff, .2);
+$form-border-focus:         #fff;
+$form-txt-color:            $font-cr-primary;
+
+// Warnings
+$cr-error:                  $cr-danger;
+$warning-cr-success:        $cr-warning;
+
+// Body
+$base-text-color:           $font-cr-primary !default;
+$base-background-color:     #fff !default;

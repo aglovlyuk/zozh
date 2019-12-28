@@ -1,0 +1,29 @@
+.dropdown-item {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    .icon-shutdown {
+        color: rgba($cr-gray, .3);
+        font-size: 18px;
+    }
+    &:before {
+        position: absolute;
+        right: 10px;
+        bottom: 100%;
+        content: '';
+        border: 6px solid transparent;
+        border-bottom-color: #263237;
+        @include media('>=largescreen') {
+            right: 33px;
+        }
+    }
+    @include hover {
+        .icon-shutdown {
+            color: $cr-gray;
+        }
+    }
+}

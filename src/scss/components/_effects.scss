@@ -1,0 +1,10 @@
+.copyright {
+    background-color: $cr-brand-primary;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 37px;
+    ::selection {
+        background-color: rgba($cr-brand-secondary, .7);
+    }
+}

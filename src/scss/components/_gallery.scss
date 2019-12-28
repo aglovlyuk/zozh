@@ -1,0 +1,72 @@
+.gallery {
+    position: relative;
+    .slick-arrow {
+        @include anim;
+        @include ycenter;
+        background-color: $cr-danger;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        text-indent: -9999px;
+        overflow: hidden;
+        z-index: 99;
+        transform-origin: 50% 0;
+        &:hover {
+            transform: scale(1.1) translateY(-50%);
+            background-color: darken($cr-danger, 10%);
+        }
+        &:after {
+            @include xycenter;
+            content: '';
+            width: 16px;
+            height: 16px;
+            transform-origin: 0 0;
+            border: solid #fff;
+            border-width: 0 0 2px 2px;
+            border-radius: 2px;
+            transform: rotate(45deg) translate(-50%, -50%);
+        }
+    }
+    .slick-prev {
+        left: 33px;
+        &:after {
+            margin-left: 5px;
+        }
+    }
+    .slick-next {
+        right: 33px;
+        &:after {
+            transform: rotate(-135deg) translate(-50%, -50%);
+            margin-left: -5px;
+        }
+    }
+
+    img {
+        display: inline;
+    }
+
+    .slick-dots {
+        @extend %listreset;
+        @include xcenter;
+        bottom: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+            margin: 0 3px;
+            line-height: 0;
+        }
+
+        button {
+            padding: 0;
+            border: 0;
+            background-color: $cr-info;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+    }
+}

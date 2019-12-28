@@ -1,0 +1,57 @@
+@import "core/colors";
+@import "core/variables";
+@import "core/mixins";
+@import "core/icons";
+@import "core/typography-settings";
+
+//@import "vendor/reset";
+@import "vendor/include-media";
+
+// Bootstrap
+@import 'core/bootstrap-overrides';
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Optional
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+
+// Slick Carousel
+@import '~slick-carousel/slick/slick';
+
+@import "utils/utils";
+@import "utils/classes";
+@import "utils/helpers";
+@import "utils/styleguide";
+
+@import "elements/buttons";
+@import "elements/links";
+@import "elements/typography";
+@import "elements/forms";
+//@import "elements/paging";
+//@import "elements/tabs";
+//@import "elements/badge";
+//@import "elements/tooltip";
+//@import "elements/dropdown";
+//@import "elements/modal-override";
+
+@import "layout/layout";
+@import "layout/footer";
+
+@import "pages/not-found";
+@import "pages/general-cms";
+
+@import "components/intro";
+@import "components/effects";
+@import "components/causes";
+@import "components/solutions";
+@import "components/about-us";
+//@import "components/popup";
+@import "components/gallery";
+

@@ -1,0 +1,19 @@
+.intro {
+    background: $bg-color-secondary;
+}
+
+.logo {
+    width: 170px;
+    height: 66px;
+    @include media('>=desktop') {
+        width: 350px;
+        height: 51px;
+    }
+}
+
+.start-date {
+    color: $font-cr-tertiary;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+}

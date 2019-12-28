@@ -1,0 +1,41 @@
+.contacts__heading {
+    margin-bottom: 35px;
+    line-height: 1.467;
+    h2 {
+        margin-bottom: .45rem;
+    }
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contacts__addresses {
+    line-height: 1.333;
+}
+
+.leasing-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px $side-gutters;
+    @include media('>=desktop') {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    a[href*="mailto"] {
+        color: currentColor;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.leasing-info__logo {
+    margin-bottom: 35px;
+}
