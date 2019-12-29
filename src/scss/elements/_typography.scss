@@ -110,3 +110,9 @@ strong, b {
         color: $font-cr-secondary;
     }
 }
+
+.txt-accent {
+    color: $accent-color;
+    background-color: transparent;
+    padding: 0;
+}

@@ -4,47 +4,59 @@ a[class*="btn"] {
 
 .btn-primary {
     @include anim;
-    border-radius: 0;
     border: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 0;
-    height: 42px;
-    background-color: $cr-brand-primary;
-    font-size: 22px;
+    height: 65px;
+    color: $btn-cr-font;
+    font-size: 14px;
     line-height: 1.2;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
-    color: $cr-brand-secondary;
     cursor: pointer;
-    padding: 5px 22px;
+    padding: 5px 20px;
     text-decoration: none;
-    box-shadow: none;
-    overflow: hidden;
+    white-space: nowrap;
     @include media('>=desktop') {
-        font-size: 28px;
-        height: 51px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        border-radius: 100px;
+        background-color: $btn-primary-bg;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
     }
     &:after {
-        @include anim($dur: $animation-speed-slow);
+        @include anim;
         content: '';
-        z-index: -1;
         position: absolute;
-        left: -35%;
-        top: 0;
-        width: 135%;
-        bottom: 0;
-        pointer-events: none;
-        background-color: lighten($cr-brand-primary, 20%);
-        transform: skew(-45deg) scaleX(-1);
-        transform-origin: 0 100%;
+        height: 100%;
+        width: 100%;
+        top: 3px;
+        left: 0;
+        box-shadow: 0 10px 50px #ffb23e;
+        background-color: #ba792e;
+        border-radius: 100px;
+        z-index: -2;
+    }
+    @include media('>=desktop') {
+        font-size: 16px;
     }
     @include hover {
         text-decoration: none;
+        color: #fff;
+        transform: translateY(3px);
         &:after {
-            transform: skew(-45deg) scaleX(1);
+            transform: translateY(-3px);
         }
     }
     .inverted & {
@@ -56,7 +68,10 @@ a[class*="btn"] {
         }
     }
     .icon {
-        margin-right: 10px;
+        margin-left: 12px;
+        @include media('>=desktop') {
+            margin-left: 20px;
+        }
     }
 }
 
