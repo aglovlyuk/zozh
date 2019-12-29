@@ -1,10 +1,97 @@
-.copyright {
-    background-color: $cr-brand-primary;
+.effects__count {
+    @extend %txt-gradient;
+    font-size: 500px;
+    line-height: 1;
+    font-weight: 900;
+    color: rgba($cr-brand-secondary, .75);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    @include media('>=largescreen') {
+        left: -100px;
+    }
+}
+
+.effects__text-ttl {
+    font-size: 35px;
+    padding-top: 105px;
+    @include media('>=desktop') {
+        padding-top: 109px;
+    }
+}
+
+.effects__text {
+    @extend %txt-gradient;
+    font-size: 200px;
+    line-height: 1;
+    font-weight: 900;
+    color: rgba($cr-brand-secondary, .5);
+    position: relative;
+    z-index: -1;
+}
+
+.effects-row {
+    margin-bottom: 36px;
+    @include media('>=desktop') {
+        margin-bottom: 74px;
+    }
+}
+
+.effects-block__ttl {
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    @include media('>=desktop') {
+        margin-bottom: 90px;
+    }
+}
+
+.effects-pyramid__row {
+    @include media('>=desktop') {
+        justify-content: flex-end;
+        align-items: center;
+        display: flex;
+        height: 126px;
+    }
+}
+
+.effects-pyramid__ttl {
+    color: $cr-heading;
+    font-size: 10px;
+    font-weight: 500;
+    max-width: 340px;
+    @include media('>=desktop') {
+        font-size: 22px;
+        margin-right: 35px;
+    }
+}
+
+.effects-pyramid__content {
+    background-color: #a96a81;
     color: #fff;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 37px;
-    ::selection {
-        background-color: rgba($cr-brand-secondary, .7);
+    font-size: 130px;
+    line-height: 1;
+    font-weight: 900;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 48px;
+    @for $i from 1 through 5 {
+        .effects-pyramid__row--#{$i} & {
+            background-image: url(../uploads/img-piramide0#{$i}.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    $min: 627;
+    $step: 90;
+
+    @for $i from 1 through 5 {
+        .effects-pyramid__row--#{$i} & {
+            $value: ($i - 1) * $step + $min;
+            width: $value + px;
+            flex: 0 0 $value + px;
+        }
     }
 }

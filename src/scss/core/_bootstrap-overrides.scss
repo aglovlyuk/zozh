@@ -4,23 +4,26 @@
 // without modifying source files.
 
 // Brand colors
-$primary:                   $cr-brand-primary;
-$secondary:                 $cr-brand-secondary;
-$success:                   $cr-success;
-$info:                      $cr-info;
-$warning:                   $cr-warning;
-$danger:                    $cr-danger;
-$light:                     $cr-gray;
+$font-size-base:                1rem !default;
+$primary:                       $cr-brand-primary;
+$secondary:                     $cr-brand-secondary;
+$success:                       $cr-success;
+$info:                          $cr-info;
+$warning:                       $cr-warning;
+$danger:                        $cr-danger;
+$light:                         $cr-gray;
 
-$spacer:                    1rem !default;
-$body-bg:                   $bg-color-primary;
+$spacer:                        1rem !default;
+$body-bg:                       $bg-color-primary;
 
-$headings-font-weight:      $heading-weight;
-$headings-color:            $heading-cr;
-$headings-margin-bottom:    $spacer * .625 !default;
+// headings
+$h2-font-size:                  $font-size-base * 2.5; // ~40px
+$headings-font-weight:          $heading-weight;
+$headings-color:                $heading-cr;
+$headings-margin-bottom:        $spacer * .625 !default;
 
-$card-border-width:         0;
-$card-cap-bg:               $cr-brand-primary;
+$card-border-width:             0;
+$card-cap-bg:                   $cr-brand-primary;
 
 // Badges
 

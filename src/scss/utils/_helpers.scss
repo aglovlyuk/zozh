@@ -1,32 +1,34 @@
 /*  keywords
     ligatured operators ≥ ≤ */
 $media-expressions: (
-  'screen': 'screen',
-  'print': 'print',
-  'handheld': 'handheld',
-  'landscape': '(orientation: landscape)',
-  'portrait': '(orientation: portrait)',
-  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
-  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+        'screen': 'screen',
+        'print': 'print',
+        'handheld': 'handheld',
+        'landscape': '(orientation: landscape)',
+        'portrait': '(orientation: portrait)',
+        'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+        'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
 );
 
 // list reset
 %listreset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 // clearfix
 %clearfix {
- &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
+
 %clearfix-full {
     @extend %clearfix;
+
     &:before {
         content: '';
         display: table;
@@ -35,34 +37,53 @@ $media-expressions: (
 }
 
 .clearfix {
-  @extend %clearfix;
+    @extend %clearfix;
 }
 
 // transition
 %transition {
- transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 // justify nav
 %justify {
- text-align: justify;
- font-size: 1px;
- line-height: 0;
- > * {
-  display: inline-block;
-  vertical-align: top;
-  text-align: left;
-  font-size: $base-font-size;
-  line-height: $line-height-base;
- }
- &:after {
-  content: '';
-  width: 100%;
-  display: inline-block;
-  vertical-align: top;
- }
+    text-align: justify;
+    font-size: 1px;
+    line-height: 0;
+
+    > * {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        font-size: $base-font-size;
+        line-height: $line-height-base;
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
+%txt-gradient {
+    background: $linear-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        background: none;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 30%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom, rgba($font-cr-tertiary, 0) 0%, $font-cr-tertiary 70%);
+        }
+    }
+}
 
 
 /// * Helper class to truncate and add ellipsis to a string too long for it to fit
@@ -71,7 +92,7 @@ $media-expressions: (
 /// * 2. Add ellipsis at the end of the line.
 
 .ellipsis {
-  white-space: nowrap; /* 1 */
-  text-overflow: ellipsis; /* 2 */
-  overflow: hidden;
+    white-space: nowrap; /* 1 */
+    text-overflow: ellipsis; /* 2 */
+    overflow: hidden;
 }

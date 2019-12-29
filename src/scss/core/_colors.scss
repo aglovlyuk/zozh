@@ -14,6 +14,7 @@ $cr-heading:                #8f8f8f;
 // background colors
 $bg-color-primary:          #fff;
 $diagonal-gradient:         linear-gradient(135deg, $cr-brand-primary 0%, $cr-brand-primary-alt 100%);
+$linear-gradient:           linear-gradient(to bottom, $cr-brand-secondary 0%, rgba($cr-brand-secondary, 0) 82%);
 $bg-color-secondary:        $diagonal-gradient;
 
 // font colors

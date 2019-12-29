@@ -28,7 +28,7 @@ const config = {
         filename: "./js/bundle.js"
     },
     devtool: "source-map",
-    mode: "dev",
+    mode: "development",
     optimization: {
         minimizer: [
             new TerserPlugin({

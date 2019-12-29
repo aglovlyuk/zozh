@@ -21,6 +21,8 @@
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/code";
 @import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities/flex";
+@import "~bootstrap/scss/utilities/spacing";
 
 // Slick Carousel
 @import '~slick-carousel/slick/slick';
@@ -51,7 +53,7 @@
 @import "components/effects";
 @import "components/causes";
 @import "components/solutions";
-@import "components/about-us";
+@import "components/about-me";
 //@import "components/popup";
 @import "components/gallery";
 

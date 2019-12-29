@@ -1,41 +1,131 @@
-.contacts__heading {
-    margin-bottom: 35px;
-    line-height: 1.467;
-    h2 {
-        margin-bottom: .45rem;
+.solutions {
+    padding-top: 39px;
+    padding-bottom: 47px;
+    @include media('>=desktop') {
+        padding-top: 47px;
+        padding-bottom: 104px;
     }
-    p {
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+}
+
+.solutions__ttl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.solutions__descr {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 68px;
 }
 
 .contacts__addresses {
     line-height: 1.333;
 }
 
-.leasing-info {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 30px $side-gutters;
-    @include media('>=desktop') {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    a[href*="mailto"] {
-        color: currentColor;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
+.solutions-complex {
+    ol {
+        @extend %listreset;
+        counter-reset: my-counter;
+        li {
+            &:before {
+                counter-increment: my-counter;
+                content: counter(my-counter) ' - ';
+                margin-right: 4px;
+            }
         }
     }
 }
 
-.leasing-info__logo {
-    margin-bottom: 35px;
+.solutions-complex__cell {
+    padding-top: 40px;
+    &-img {
+        margin-top: -40px;
+    }
+}
+
+.solutions-complex__ttl {
+    @include xcenter;
+    top: 0;
+    color: rgba($cr-brand-secondary, .1);
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    @include media('>=desktop') {
+        font-size: 100px;
+    }
+}
+
+
+.solution-pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.solution-pyramid__row {
+    position: relative;
+    filter: drop-shadow(0 10px 20px $cr-brand-secondary);
+    @include media('>=desktop') {
+        margin-bottom: 12px;
+    }
+    &:first-child {
+        .solution-pyramid__row-inner {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        .solution-pyramid__txt {
+            margin-top: 30px;
+        }
+    }
+    &:nth-child(2) {
+        .solution-pyramid__row-inner {
+            clip-path: polygon(25% 0,75% 0,100% 100%,0 100%);
+        }
+    }
+    &:nth-child(3) {
+        .solution-pyramid__row-inner {
+            clip-path: polygon(18.5% 0, 81.5% 0, 100% 100%, 0 100%);
+        }
+    }
+    &:nth-child(4) {
+        .solution-pyramid__row-inner {
+            clip-path: polygon(12.5% 0, 87.5% 0, 100% 100%, 0 100%);
+        }
+    }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        filter: none !important;
+    }
+}
+
+.solution-pyramid__txt {
+    @include xycenter;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: #fff;
+    width: 70%;
+    @include media('>=desktop') {
+        font-size: 16px;
+    }
+}
+
+.counter__ttl {
+    display: block;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    @include media('>=desktop') {
+        font-size: 60px;
+    }
+}
+
+.counter__sale-percent {
+    @extend %txt-gradient;
+    color: rgba($cr-brand-secondary, .5);
+    font-size: 350px;
+    line-height: 1;
+    font-weight: 900;
 }

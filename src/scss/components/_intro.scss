@@ -1,9 +1,17 @@
 .intro {
     background: $bg-color-secondary;
-    background: url(../img/ ) no-repeat;
     padding-top: 50px;
     position: relative;
     z-index: 0;
+    &:before {
+        @include xcenter;
+        top: 0;
+        content: '';
+        background: url(../img/bg-intro.png) no-repeat 50% 0;
+        width: 1566px;
+        height: 770px;
+        z-index: -1;
+    }
 }
 
 .logo-holder {
