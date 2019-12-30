@@ -1,0 +1,122 @@
+.programm {
+    padding-top: 52px;
+    padding-bottom: 80px;
+    @include media('>=desktop') {
+        padding-top: 71px;
+        padding-bottom: 67px;
+    }
+}
+
+.programm__ttl {
+    margin-bottom: 40px;
+}
+
+.programm-block {
+    box-shadow: 0 7px 20px rgba(#000, .15);
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 31px;
+    @include media('>=desktop') {
+        margin-bottom: 25px;
+    }
+}
+
+.programm-block__ttl {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 24px 26px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    @include media('>=desktop') {
+        padding: 32px 54px;
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        background: url(../img/arrow-big.svg) no-repeat;
+        background-size: cover;
+        transform: rotate(90deg);
+        width: 13px;
+        height: 21px;
+        @include media('>=desktop') {
+            @include ycenter;
+            transform: rotate(90deg) translateX(-50%);
+            right: 30px;
+        }
+    }
+}
+
+.programm-block__content {
+    position: relative;
+    padding-left: 26px;
+    padding-right: 26px;
+    @include media('>=desktop') {
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 17px;
+        background-color: rgba($cr-heading, .3);
+        height: 1px;
+        right: 40px;
+        top: 0;
+    }
+}
+
+.programm-block__content-row {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @include media('>=desktop') {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    &:not(:last-child) {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            left: -20px;
+            background-color: rgba($cr-heading, .3);
+            height: 1px;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+.programm-block__content-ttl {
+    color: $cr-brand-secondary;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    @include media('>=desktop') {
+        margin-bottom: 34px;
+    }
+}
+
+.programm-block__list {
+    @extend %listreset;
+    color: $cr-heading;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25;
+    li {
+        margin-bottom: 22px;
+        padding-left: 38px;
+        position: relative;
+        &:before {
+            content: '';
+            background: url(../img/y-tube.svg) no-repeat;
+            background-size: cover;
+            width: 23px;
+            height: 16px;
+            position: absolute;
+            top: 2px;
+            left: 0;
+        }
+    }
+}

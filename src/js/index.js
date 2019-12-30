@@ -1,5 +1,10 @@
 import popper from 'popper.js';
-import bootstrap from 'bootstrap';
+import collapse from 'bootstrap/js/dist/collapse';
 
-import '../scss/main.scss';
 import './sliders';
+
+if(typeof($.fn.collapse) != 'undefined'){
+    console.log($.fn.collapse)
+} else {
+    console.log('asdf')
+}

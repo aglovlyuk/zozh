@@ -1,8 +1,6 @@
 import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
-
-//import '~slick-carousel/slick/slick';
 import 'slick-carousel';
 
 $(function() {

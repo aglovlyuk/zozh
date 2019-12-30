@@ -45,6 +45,10 @@ h5, .h5 {
     cursor: default;
 }
 
+h2 {
+    text-transform: uppercase;
+}
+
 a {
     @include anim;
     color: $cr-link;
@@ -106,7 +110,7 @@ strong, b {
 }
 
 .txt-accent {
-    color: $accent-color;
+    color: $accent-color !important;
     background-color: transparent;
     padding: 0;
 }

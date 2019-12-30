@@ -21,8 +21,21 @@ a[class*="btn"] {
     text-decoration: none;
     white-space: nowrap;
     @include media('>=desktop') {
+        font-size: 16px;
         padding-left: 28px;
         padding-right: 28px;
+    }
+    @include media('>=largescreen') {
+        min-width: 337px;
+    }
+
+    @include hover {
+        text-decoration: none;
+        color: #fff;
+        transform: translateY(3px);
+        &:after {
+            transform: translateY(-3px);
+        }
     }
     &:before {
         content: '';
@@ -47,17 +60,6 @@ a[class*="btn"] {
         background-color: #ba792e;
         border-radius: 100px;
         z-index: -2;
-    }
-    @include media('>=desktop') {
-        font-size: 16px;
-    }
-    @include hover {
-        text-decoration: none;
-        color: #fff;
-        transform: translateY(3px);
-        &:after {
-            transform: translateY(-3px);
-        }
     }
     .inverted & {
         color: $cr-brand-secondary;
