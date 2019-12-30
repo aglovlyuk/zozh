@@ -8,13 +8,14 @@ $cr-warning:                #ffc826;
 $cr-success:                #00bf96;
 $cr-info:                   #ff5724;
 $cr-link:                   $cr-danger;
-$cr-gray:                   #666;
-$cr-heading:                #8f8f8f;
+$cr-gray:                   #8f8f8f;
+$cr-heading:                #666;
 
 // background colors
-$bg-color-primary:          #fff;
 $diagonal-gradient:         linear-gradient(135deg, $cr-brand-primary 0%, $cr-brand-primary-alt 100%);
 $linear-gradient:           linear-gradient(to bottom, $cr-brand-secondary 0%, rgba($cr-brand-secondary, 0) 82%);
+
+$bg-color-primary:          #fff;
 $bg-color-secondary:        $diagonal-gradient;
 
 // font colors

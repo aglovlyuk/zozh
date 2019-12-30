@@ -24,6 +24,7 @@
 @import "~bootstrap/scss/utilities/flex";
 @import "~bootstrap/scss/utilities/spacing";
 @import "~bootstrap/scss/utilities/text";
+@import "~bootstrap/scss/utilities/display";
 @import "~bootstrap/scss/transitions";
 
 // Slick Carousel
@@ -59,5 +60,9 @@
 @import "components/programm";
 @import "components/format-participation";
 @import "components/packages";
+@import "components/results";
 @import "components/gallery";
-
+@import "components/reviews";
+@import "components/guarantee";
+@import "components/counter";
+@import "components/faq";

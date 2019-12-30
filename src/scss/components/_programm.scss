@@ -35,7 +35,7 @@
     &:after {
         content: '';
         display: inline-block;
-        background: url(../img/arrow-big.svg) no-repeat;
+        background: url(../img/svg-icons/arrow-big.svg) no-repeat;
         background-size: cover;
         transform: rotate(90deg);
         width: 13px;
@@ -60,7 +60,7 @@
         content: '';
         position: absolute;
         left: 17px;
-        background-color: rgba($cr-heading, .3);
+        background-color: rgba($cr-gray, .3);
         height: 1px;
         right: 40px;
         top: 0;
@@ -80,7 +80,7 @@
             content: '';
             position: absolute;
             left: -20px;
-            background-color: rgba($cr-heading, .3);
+            background-color: rgba($cr-gray, .3);
             height: 1px;
             right: 0;
             bottom: 0;
@@ -100,7 +100,7 @@
 
 .programm-block__list {
     @extend %listreset;
-    color: $cr-heading;
+    color: $cr-gray;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.25;

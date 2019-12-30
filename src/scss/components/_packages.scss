@@ -3,15 +3,95 @@
     padding-bottom: 48px;
     @include media('>=desktop') {
         padding-top: 93px;
-        padding-bottom: 168px;
+        padding-bottom: 102px;
     }
 }
+
+.packages__ttl {
+    margin-bottom: 50px;
+    @include media('>=desktop') {
+        margin-bottom: 116px;
+    }
+}
+
+.packages__row {
+}
+
 .package {
     box-shadow: 0 10px 50px rgba(#000, .25);
-    border-radius: 10px;
     background-color: #fff;
     padding: 46px 30px;
-    @include media('>=desktop') {
-        padding: 46px 40px;
+    @include media('<desktop') {
+        margin-bottom: 63px;
+        margin-right: -$grid-gutter-width/2;
+        margin-left: -$grid-gutter-width/2;
     }
+    @include media('>=desktop') {
+        border-radius: 10px;
+        padding: 46px 40px;
+        margin-bottom: 102px;
+    }
+    &--middle {
+        @include media('>=desktop') {
+            margin-top: -50px;
+        }
+    }
+}
+
+.package__ttl {
+    text-align: center;
+    color: $cr-brand-secondary;
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @include media('>=desktop') {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+}
+
+.package__options {
+    @extend %listreset;
+    color: $cr-gray;
+    font-size: 18px;
+    font-weight: 400;
+    li {
+        margin-bottom: 12px;
+        padding-left: 27px;
+        position: relative;
+        &.disabled {
+            color: #c4c4c4;
+            &:before {
+                background: url(../img/svg-icons/burger.svg) no-repeat;
+                background-size: cover;
+                width: 16px;
+                height: 15px;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            background: url(../img/svg-icons/broccoli.svg) no-repeat;
+            background-size: cover;
+            width: 15px;
+            height: 13px;
+        }
+    }
+}
+
+.package__price {
+    color: $cr-brand-secondary;
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.pack__sale {
+    color: rgba(165, 59, 98, 0.5);
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
 }

@@ -106,7 +106,7 @@ const config = {
             {
                 from: "./src/img",
                 to: "./img",
-                ignore: ['svg-icons/*.svg', '*.scss', 'icons-template.svg'],
+                ignore: ['*.scss', 'icons-template.svg'],
             },
             {
                 from: "./src/uploads",

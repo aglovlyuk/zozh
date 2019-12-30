@@ -1,0 +1,31 @@
+.counter--bg {
+    .countdown-holder {
+        background: url(../img/arrows.png) no-repeat 50% 50%;
+        min-height: 304px;
+    }
+}
+
+.counter__ttl {
+    display: block;
+    font-size: 30px;
+    font-weight: 900;
+    color: $cr-gray;
+    text-transform: uppercase;
+    @include media('>=desktop') {
+        font-size: 60px;
+    }
+}
+
+.counter__sale-percent {
+    @extend %txt-gradient;
+    color: rgba($cr-brand-secondary, .5);
+    font-size: 28.23vw;
+    line-height: 1;
+    font-weight: 900;
+    @include media('>=desktop') {
+        margin-left: -100px;
+    }
+    @include media('>=largescreen') {
+        font-size: 350px;
+    }
+}

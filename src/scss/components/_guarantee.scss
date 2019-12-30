@@ -1,0 +1,44 @@
+.guarantee {
+    padding-top: 59px;
+    padding-bottom: 40px;
+    background-image: $bg-color-secondary;
+    color: #fff;
+    @include media('>=desktop') {
+        padding-top: 71px;
+        padding-bottom: 107px;
+    }
+    .counter__ttl {
+        color: currentColor;
+        .txt-accent {
+            color: currentColor !important;
+        }
+    }
+}
+
+.guarantee__ttl {
+    margin-bottom: 42px;
+    color: currentColor;
+}
+
+.icon-guarantee {
+    font-size: 396px;
+    color: $cr-brand-secondary;
+    @include media('>=largescreen') {
+        font-size: 396px;
+    }
+}
+
+.guarantee__txt {
+    font-size: 20px;
+    margin-bottom: 0 -$side-gutters-sm 50px;
+    @include media('>=desktop') {
+        margin-bottom: 70px;
+    }
+}
+
+.guarantee__cta {
+    margin-bottom: 43px;
+    @include media('>=desktop') {
+        margin-bottom: 69px;
+    }
+}
