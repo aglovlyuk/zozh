@@ -1,3 +1,10 @@
+.effects {
+    padding-bottom: 27px;
+    @include media('>=desktop') {
+        padding-bottom: 91px;
+    }
+}
+
 .effects__count {
     @extend %txt-gradient;
     font-size: 500px;
@@ -5,19 +12,30 @@
     font-weight: 900;
     color: rgba($cr-brand-secondary, .75);
     position: absolute;
-    bottom: 0;
+    bottom: -13px;
     left: 0;
     z-index: -1;
     @include media('>=largescreen') {
-        left: -100px;
+        left: -65px;
     }
 }
 
 .effects__text-ttl {
     font-size: 35px;
     padding-top: 105px;
+    margin-bottom: 30px;
     @include media('>=desktop') {
         padding-top: 109px;
+        margin-bottom: 52px;
+    }
+    @include media('>=largescreen') {
+        padding-left: 100px;
+    }
+}
+
+.effects__img {
+    @include media('>=desktop') {
+        margin: -17px -77px 0 38px;
     }
 }
 
@@ -29,6 +47,9 @@
     color: rgba($cr-brand-secondary, .5);
     position: relative;
     z-index: -1;
+    margin-right: -92px;
+    text-align: right;
+    text-transform: uppercase;
 }
 
 .effects-row {
@@ -42,7 +63,7 @@
     text-transform: uppercase;
     margin-bottom: 6px;
     @include media('>=desktop') {
-        margin-bottom: 90px;
+        margin-bottom: 98px;
     }
 }
 
@@ -62,7 +83,7 @@
     max-width: 340px;
     @include media('>=desktop') {
         font-size: 22px;
-        margin-right: 35px;
+        margin-right: 17px;
     }
 }
 
@@ -75,7 +96,7 @@
     font-style: italic;
     display: flex;
     align-items: center;
-    padding: 0 0 0 48px;
+    padding: 0 0 0 37px;
     @for $i from 1 through 5 {
         .effects-pyramid__row--#{$i} & {
             background-image: url(../uploads/img-piramide0#{$i}.jpg);
@@ -85,7 +106,7 @@
     }
 
     $min: 627;
-    $step: 90;
+    $step: 103;
 
     @for $i from 1 through 5 {
         .effects-pyramid__row--#{$i} & {

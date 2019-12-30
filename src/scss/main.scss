@@ -66,3 +66,13 @@
 @import "components/guarantee";
 @import "components/counter";
 @import "components/faq";
+
+.pp{
+    position: absolute;
+    pointer-events: none;
+    top: 4px;
+    left: 50%;
+    opacity: .5;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
