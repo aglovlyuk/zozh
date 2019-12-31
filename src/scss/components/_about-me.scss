@@ -7,13 +7,24 @@
 .about-me__ttl {
     color: currentColor;
     text-transform: uppercase;
+    @include media('<desktop') {
+        margin-bottom: 38px;
+    }
 }
 
 .about-me__visual {
     position: relative;
     z-index: 0;
+    @include media('<desktop') {
+        width: 100%;
+    }
     @include media('>=desktop') {
         margin: -22px 0 0 60px;
+    }
+    > img {
+        @include media('<tablet') {
+            max-height: 462px;
+        }
     }
 }
 
@@ -24,15 +35,23 @@
     z-index: -1;
     text-transform: uppercase;
     color: rgba($cr-brand-secondary, .2);
-    font-size: 200px;
+    font-size: 100px;
     font-weight: 900;
+    @include media('>=desktop') {
+        left: -70px;
+        font-size: 150px;
+    }
     @include media('>=largescreen') {
+        font-size: 200px;
         left: -170px;
     }
 }
 
 .about-me__list {
     @extend %listreset;
+    @include media('<tablet') {
+        padding-left: $side-gutters-sm * 2;
+    }
     @include media('>=largescreen') {
         margin: 93px 2vw 0 -10px;
     }

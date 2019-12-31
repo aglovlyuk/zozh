@@ -87,6 +87,10 @@ const config = {
                 test: /\.html$/,
                 include: path.resolve(__dirname, "src/html/includes"),
                 use: ["raw-loader"]
+            },
+            {
+                test: /\.css$/i,
+                use: ['css-loader'],
             }
         ]
     },

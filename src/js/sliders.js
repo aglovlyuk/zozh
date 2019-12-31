@@ -12,7 +12,7 @@ $(function() {
         dots: false,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,

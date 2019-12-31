@@ -32,6 +32,10 @@
     position: relative;
     padding-top: 60px;
     padding-bottom: 40px;
+    @include media('<desktop') {
+        padding-left: $side-gutters-sm;
+        padding-right: $side-gutters-sm;
+    }
     @include media('>=desktop') {
         padding-bottom: 87px;
         padding-top: 60px;
@@ -41,54 +45,98 @@
 .participation__content-img {
     margin: 0 auto;
     display: block;
-    @include media('>=desktop') {
+    @include media('>=widescreen') {
         transform: translateX(-80px);
     }
 }
 
 .participation-block {
-    position: absolute;
-    max-width: 370px;
-    padding-left: 71px;
+    @include media('>=phone', '<desktop') {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include media('<desktop') {
+        margin-bottom: 20px;
+    }
+    @include media('>=desktop') {
+        padding-left: 71px;
+        position: absolute;
+        max-width: 300px;
+    }
+    @include media('>=widescreen') {
+        max-width: 370px;
+    }
     &--1 {
-        left: 170px;
-        top: 0;
+        @include media('>=desktop') {
+            left: 13.71%;
+            top: 0;
+        }
     }
     &--2 {
-        left: 18px;
-        top: 175px;
+        @include media('>=desktop') {
+            left: 1.452%;
+            top: 175px;
+        }
     }
     &--3 {
-        left: 20px;
-        bottom: 211px;
+        @include media('>=desktop') {
+            left: 1.613%;
+            bottom: 211px;
+        }
     }
     &--4 {
-        right: 251px;
-        top: 0;
+        @include media('>=desktop') {
+            right: 3%;
+            top: 0;
+        }
+        @include media('>=widescreen') {
+            right: 20.24%;
+        }
     }
     &--5 {
-        left: 203px;
-        bottom: 0;
+        @include media('>=desktop') {
+            left: 16.37%;
+            bottom: 0;
+        }
     }
     &--6 {
-        right: 250px;
-        bottom: 0;
+        @include media('>=desktop') {
+            right: 20.16%;
+            bottom: 0;
+        }
     }
     &--7 {
-        right: 40px;
-        bottom: 192px;
+        @include media('>=desktop') {
+            bottom: 192px;
+            right: 0;
+        }
+        @include media('>=widescreen') {
+            right: 3.23%;
+        }
     }
     &--8 {
-        top: 175px;
-        right: 40px;
+        @include media('>=desktop') {
+            top: 175px;
+            right: 0;
+        }
+        @include media('>=widescreen') {
+            right: 3.23%;
+        }
     }
 
     .icon {
         color: $cr-brand-secondary;
         font-size: 56px;
-        position: absolute;
-        top: 16px;
-        left: 0;
+        @include media('<desktop') {
+            margin: 0 auto 28px;
+            display: block;
+        }
+        @include media('>=desktop') {
+            position: absolute;
+            top: 16px;
+            left: 0;
+        }
     }
     .icon-members {
         font-size: 48px;

@@ -65,3 +65,15 @@ body {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
+.no-lg-gutters {
+    @include media('>=desktop') {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.side-gutters {
+    padding-left: $side-gutters-sm;
+    padding-right: $side-gutters-sm;
+}

@@ -2,8 +2,6 @@
 /* Reset */
 .flip-clock-wrapper * {
     box-sizing: border-box;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
@@ -44,7 +42,10 @@
 .flip-clock-meridium {
     background: none !important;
     box-shadow: 0 0 0 !important;
-    font-size: 36px !important;
+    font-size: 24px !important;
+    @include media('>=desktop') {
+        font-size: 36px !important;
+    }
 }
 
 .flip-clock-meridium a {
@@ -73,12 +74,18 @@
     position: relative;
     float: left;
     margin: 5px;
-    width: 60px;
-    height: 90px;
-    font-size: 80px;
+    width: 40px;
+    height: 60px;
+    font-size: 53px;
+    line-height: 58px;
     font-weight: bold;
-    line-height: 87px;
     border-radius: 6px;
+    @include media('>=desktop') {
+        font-size: 80px;
+        line-height: 87px;
+        width: 60px;
+        height: 90px;
+    }
 }
 
 .flip-clock-wrapper ul li {
@@ -88,8 +95,11 @@
     top: 0;
     width: 100%;
     height: 100%;
-    line-height: 87px;
+    line-height: 58px;
     text-decoration: none !important;
+    @include media('>=desktop') {
+        line-height: 87px;
+    }
 }
 
 .flip-clock-wrapper ul li:first-child {
@@ -99,12 +109,13 @@
 .flip-clock-wrapper ul li a {
     display: block;
     height: 100%;
-    -webkit-perspective: 200px;
-    -moz-perspective: 200px;
-    perspective: 200px;
+    perspective: 133px;
     margin: 0 !important;
     overflow: visible !important;
     cursor: default !important;
+    @include media('>=desktop') {
+        perspective: 200px;
+    }
 }
 
 .flip-clock-wrapper ul li a div {
@@ -113,9 +124,12 @@
     left: 0;
     width: 100%;
     height: 50%;
-    font-size: 80px;
+    font-size: 53px;
     overflow: hidden;
     outline: 1px solid transparent;
+    @include media('>=desktop') {
+        font-size: 80px;
+    }
 }
 
 .flip-clock-wrapper ul li a div .shadow {
@@ -133,12 +147,16 @@
 .flip-clock-wrapper ul li a div.up:after {
     content: "";
     position: absolute;
-    top: 44px;
+    top: 27px;
     left: 0;
     z-index: 5;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: rgba(#000, .15);
+    @include media('>=desktop') {
+        top: 44px;
+        height: 3px;
+    }
 }
 
 .flip-clock-wrapper ul li a div.down {
@@ -158,7 +176,10 @@
     text-align: center;
     background-color: $cr-counter;
     border-radius: 6px;
-    font-size: 70px;
+    font-size: 47px;
+    @include media('>=desktop') {
+        font-size: 70px;
+    }
 }
 
 .flip-clock-wrapper ul li a div.up div.inn {
@@ -179,8 +200,6 @@
 }
 
 .flip-clock-wrapper ul.play li.flip-clock-active {
-    -webkit-animation: asd 0.5s 0.5s linear both;
-    -moz-animation: asd 0.5s 0.5s linear both;
     animation: asd 0.5s 0.5s linear both;
     z-index: 5;
 }
@@ -189,8 +208,12 @@
     float: left;
     display: inline-block;
     position: relative;
-    width: 20px;
-    height: 100px;
+    width: 13px;
+    height: 67px;
+    @include media('>=desktop') {
+        width: 20px;
+        height: 100px;
+    }
 }
 
 .flip-clock-divider:first-child {
@@ -200,11 +223,16 @@
 .flip-clock-dot {
     display: block;
     background: #aa8b2b;
-    width: 10px;
-    height: 10px;
+    width: 7px;
+    height: 7px;
     position: absolute;
     border-radius: 50%;
-    left: 5px;
+    left: 3px;
+    @include media('>=desktop') {
+        width: 10px;
+        height: 10px;
+        left: 5px;
+    }
 }
 
 .flip-clock-divider .flip-clock-label {
@@ -224,11 +252,11 @@
 }
 
 .flip-clock-dot.top {
-    top: 30px;
+    top: 33.333%;
 }
 
 .flip-clock-dot.bottom {
-    bottom: 30px;
+    bottom: 33.333%;
 }
 
 @-webkit-keyframes asd {
@@ -289,8 +317,6 @@
 
 .flip-clock-wrapper ul.play li.flip-clock-active .down {
     z-index: 2;
-    -webkit-animation: turn 0.5s 0.5s linear both;
-    -moz-animation: turn 0.5s 0.5s linear both;
     animation: turn 0.5s 0.5s linear both;
 }
 
@@ -336,39 +362,7 @@
 
 .flip-clock-wrapper ul.play li.flip-clock-before .up {
     z-index: 2;
-    -webkit-animation: turn2 0.5s linear both;
-    -moz-animation: turn2 0.5s linear both;
     animation: turn2 0.5s linear both;
-}
-
-@-webkit-keyframes turn2 {
-    0% {
-        -webkit-transform: rotateX(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotateX(-90deg);
-    }
-}
-
-@-moz-keyframes turn2 {
-    0% {
-        -moz-transform: rotateX(0deg);
-    }
-
-    100% {
-        -moz-transform: rotateX(-90deg);
-    }
-}
-
-@-o-keyframes turn2 {
-    0% {
-        -o-transform: rotateX(0deg);
-    }
-
-    100% {
-        -o-transform: rotateX(-90deg);
-    }
 }
 
 @keyframes turn2 {
@@ -407,36 +401,6 @@
     animation: hide 0.5s 0.2s linear both;
 }
 
-@-webkit-keyframes show {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes show {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes show {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes show {
     0% {
         opacity: 0;
@@ -444,36 +408,6 @@
 
     100% {
         opacity: 1;
-    }
-}
-
-@-webkit-keyframes hide {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@-moz-keyframes hide {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@-o-keyframes hide {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
     }
 }
 

@@ -26,16 +26,16 @@
     }
     .slick-prev {
         left: 0;
-        transform: translate(-5px, -50%) scale(1) rotate(45deg);
+        transform: translate(0, -50%) scale(1) rotate(45deg);
         &:hover {
-            transform: translateY(-5px, -50%) scale(1.1) rotate(45deg);
+            transform: translateY(0, -50%) scale(1.1) rotate(45deg);
         }
     }
     .slick-next {
         right: 0;
-        transform: translate(-18px, -50%) scale(-1) rotate(45deg);
+        transform: translate(0, -50%) scale(-1) rotate(45deg);
         &:hover {
-            transform: translate(-18px, -50%) scale(-1.1) rotate(45deg);
+            transform: translate(0, -50%) scale(-1.1) rotate(45deg);
         }
     }
 
@@ -83,6 +83,18 @@
     @include media('>=desktop') {
         padding-left: 27px;
         padding-right: 27px;
+    }
+}
+
+.team__block {
+    @include media('<phablet') {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 286px;
+    }
+    @include media('<desktop') {
+        padding-left: $side-gutters-sm;
+        padding-right: $side-gutters-sm;
     }
 }
 

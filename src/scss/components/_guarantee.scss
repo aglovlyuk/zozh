@@ -24,8 +24,11 @@
 }
 
 .icon-guarantee {
-    font-size: 396px;
+    font-size: 185px;
     color: $cr-brand-secondary;
+    @include media('>=tablet') {
+        font-size: 250px;
+    }
     @include media('>=largescreen') {
         font-size: 396px;
         margin-left: 105px;
@@ -35,8 +38,15 @@
 
 .guarantee__txt {
     font-size: 20px;
-    margin-bottom: 0 -$side-gutters-sm 50px;
+    margin-bottom: 50px;
+    @include media('<desktop') {
+        max-width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
     @include media('>=desktop') {
+        margin-left: #{-$side-gutters-sm};
+        margin-right: #{-$side-gutters-sm};
         margin-bottom: 55px;
     }
 }

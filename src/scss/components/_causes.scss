@@ -128,6 +128,9 @@
     > img {
         position: relative;
         z-index: 1;
+        @include media('<desktop') {
+            margin-left: -50px;
+        }
         @include media('>=largescreen') {
             margin-left: -124px;
         }
@@ -148,28 +151,49 @@
 }
 
 .problems-circle__factor {
-    font-size: 4.267vw;
+    font-size: 16px;
     font-weight: 700;
     position: absolute;
     max-width: 260px;
     text-transform: uppercase;
-    @include media('>=tablet') {
+    @include media('<desktop') {
+        max-width: 130px;
+    }
+    @include media('>=desktop') {
         font-size: 26px;
     }
     &--1 {
         @include xcenter;
-        top: 100px;
-        margin-left: -20px;
+        top: 13vw;
+        @include media('>=desktop') {
+            margin-left: -20px;
+            top: 100px;
+        }
     }
     &--2 {
         @include ycenter;
-        left: 0;
-        margin-top: 102px;
+        left: 2vw;
+        margin-top: 16.5vw;
+        @include media('>=phone') {
+            left: 11vw;
+        }
+        @include media('>=tablet') {
+            margin-top: 10.5vw;
+            left: 4vw;
+        }
+        @include media('>=desktop') {
+            margin-top: 102px;
+            left: 0;
+        }
     }
     &--3 {
-        right: 28px;
-        bottom: 1vw;
+        right: 0;
+        bottom: 20vw;
         @include media('>=tablet') {
+            bottom: 13vw;
+        }
+        @include media('>=desktop') {
+            right: 3.28%;
             bottom: 164px;
         }
     }

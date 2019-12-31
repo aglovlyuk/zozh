@@ -81,3 +81,9 @@
         padding-bottom: 28px;
     }
 }
+
+.faq__img {
+    @include media('<desktop') {
+        max-width: 210px;
+    }
+}

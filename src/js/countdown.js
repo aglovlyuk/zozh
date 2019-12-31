@@ -15,5 +15,5 @@ $(function() {
             countdown: true,
             language: 'ru'
         });
-    })
+    });
 });

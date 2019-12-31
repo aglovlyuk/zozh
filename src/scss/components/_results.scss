@@ -18,8 +18,13 @@
 }
 
 .result-block {
-    max-width: 267px;
     font-size: 1.25rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media('>=tablet') {
+        max-width: 267px;
+    }
     .icon {
         display: block;
         margin: 0 auto 27px;

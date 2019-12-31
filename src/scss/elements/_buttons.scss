@@ -21,6 +21,7 @@ a[class*="btn"] {
     text-decoration: none;
     white-space: nowrap;
     min-width: 280px;
+    background: none;
     @include media('>=desktop') {
         font-size: 16px;
         padding-left: 28px;

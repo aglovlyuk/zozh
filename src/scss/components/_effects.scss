@@ -1,5 +1,8 @@
 .effects {
     padding-bottom: 27px;
+    @include media('<desktop') {
+        overflow: hidden;
+    }
     @include media('>=desktop') {
         padding-bottom: 91px;
     }
@@ -7,15 +10,17 @@
 
 .effects__count {
     @extend %txt-gradient;
-    font-size: 500px;
+    font-size: 300px;
     line-height: 1;
     font-weight: 900;
     color: rgba($cr-brand-secondary, .75);
     position: absolute;
-    bottom: -13px;
+    bottom: 24px;
     left: 0;
     z-index: -1;
     @include media('>=largescreen') {
+        font-size: 500px;
+        bottom: -13px;
         left: -65px;
     }
 }
@@ -76,6 +81,13 @@
     }
 }
 
+
+.effects-pyramid {
+    @include media('<largescreen') {
+        margin-right: -$side-gutters-sm;
+    }
+}
+
 .effects-pyramid__row {
     position: relative;
     @include media('>=desktop') {
@@ -119,10 +131,14 @@
     font-style: italic;
     display: flex;
     align-items: center;
-    padding: 0 0 0 37px;
     @include media('<desktop') {
         text-indent: -9999px;
-        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @include media('>=desktop') {
+        padding-left: 40px;
     }
     @for $i from 1 through 5 {
         .effects-pyramid__row--#{$i} & {
@@ -132,14 +148,29 @@
         }
     }
 
-    $min: 627;
-    $step: 103;
+    @include media('>=desktop') {
+        $min: 380;
+        $step: 103;
 
-    @for $i from 1 through 5 {
-        .effects-pyramid__row--#{$i} & {
-            $value: ($i - 1) * $step + $min;
-            width: $value + px;
-            flex: 0 0 $value + px;
+        @for $i from 1 through 5 {
+            .effects-pyramid__row--#{$i} & {
+                $value: ($i - 1) * $step + $min;
+                width: $value + px;
+                flex: 0 0 $value + px;
+            }
+        }
+    }
+
+    @include media('>=widescreen') {
+        $min: 627;
+        $step: 103;
+
+        @for $i from 1 through 5 {
+            .effects-pyramid__row--#{$i} & {
+                $value: ($i - 1) * $step + $min;
+                width: $value + px;
+                flex: 0 0 $value + px;
+            }
         }
     }
 
@@ -148,6 +179,9 @@
             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
             width: 86px;
             height: 72px;
+        }
+        @include media('>=desktop') {
+            padding-left: 55px;
         }
     }
     .effects-pyramid__row--2 & {
@@ -176,7 +210,9 @@
             clip-path: polygon(11% 0, 88.5% 0, 100% 100%, 0 100%);
             width: 508px;
             height: 83px;
-            margin: 0 auto;
+        }
+        @include media('>=desktop') {
+            padding-left: 55px;
         }
     }
 }

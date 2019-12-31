@@ -2,8 +2,10 @@
     margin-top: -40px;
 }
 
-.pt-77 {
-    padding-top: 77px !important;
+.pt-lg-77 {
+    @include media('>=desktop') {
+        padding-top: 77px !important;
+    }
 }
 
 .js-tab-hidden {
