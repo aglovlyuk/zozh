@@ -1,6 +1,7 @@
 .solutions {
     padding-top: 39px;
     padding-bottom: 47px;
+    color: $cr-heading;
     @include media('>=desktop') {
         padding-top: 47px;
         padding-bottom: 115px;
@@ -22,11 +23,22 @@
 }
 
 .solutions__descr {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 54px;
+    color: $cr-heading;
+    @include media('<desktop') {
+        max-width: 80vw;
+        margin: 0 auto 54px;
+    }
     @include media('>=desktop') {
+        font-size: 22px;
         margin-bottom: 78px;
+    }
+}
+
+.solutions__video {
+    @include media('<desktop') {
+        margin-bottom: 76px;
     }
 }
 

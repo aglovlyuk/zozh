@@ -100,9 +100,12 @@
 
 .causes__slogan-footer {
     display: block;
-    font-size: 26px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 16px;
+    @include media('>=desktop') {
+        font-size: 26px;
+    }
 }
 
 
@@ -174,6 +177,9 @@
 
 .problems__slogan {
     color: $cr-brand-secondary;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 700;
+    @include media('>=desktop') {
+        font-size: 26px;
+    }
 }

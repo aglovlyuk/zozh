@@ -102,6 +102,9 @@
     color: #fff;
     font-size: 18px;
     font-weight: 300;
+    @include media('<desktop') {
+        margin-bottom: 45px;
+    }
 }
 
 .intro__cource-author {
