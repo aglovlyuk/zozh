@@ -3,7 +3,10 @@
     padding-bottom: 47px;
     @include media('>=desktop') {
         padding-top: 47px;
-        padding-bottom: 104px;
+        padding-bottom: 115px;
+    }
+    .counter__ttl {
+        margin-bottom: 50px;
     }
 }
 
@@ -12,12 +15,19 @@
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    margin-bottom: 10px;
+    @include media('>=desktop') {
+        margin-bottom: 24px;
+    }
 }
 
 .solutions__descr {
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 68px;
+    margin-bottom: 54px;
+    @include media('>=desktop') {
+        margin-bottom: 78px;
+    }
 }
 
 .contacts__addresses {
@@ -25,6 +35,9 @@
 }
 
 .solutions-complex {
+    @include media('>=desktop') {
+        margin-top: 85px;
+    }
     ol {
         @extend %listreset;
         counter-reset: my-counter;
@@ -55,6 +68,7 @@
     text-transform: uppercase;
     @include media('>=desktop') {
         font-size: 100px;
+        margin-left: -67px;
     }
 }
 
@@ -63,35 +77,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 10px;
+    margin-bottom: 116px;
+    @include media('>=largescreen') {
+        margin-left: 40px;
+        margin-bottom: 38px;
+    }
 }
 
 .solution-pyramid__row {
     position: relative;
     filter: drop-shadow(0 10px 20px $cr-brand-secondary);
     @include media('>=desktop') {
-        margin-bottom: 12px;
+        margin-bottom: 14px;
     }
     &:first-child {
         .solution-pyramid__row-inner {
             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
         }
         .solution-pyramid__txt {
-            margin-top: 30px;
+            margin-top: 37px;
         }
     }
     &:nth-child(2) {
         .solution-pyramid__row-inner {
-            clip-path: polygon(25% 0,75% 0,100% 100%,0 100%);
+            clip-path: polygon(25% 0, 78.5% 0, 100% 100%, 0 100%);
+            transform: translateX(-2%);
         }
     }
     &:nth-child(3) {
         .solution-pyramid__row-inner {
-            clip-path: polygon(18.5% 0, 81.5% 0, 100% 100%, 0 100%);
+            clip-path: polygon(18.5% 0, 84.8% 0, 100% 100%, 0 100%);
+            transform: translateX(-3.4%);
         }
     }
     &:nth-child(4) {
         .solution-pyramid__row-inner {
-            clip-path: polygon(12.5% 0, 87.5% 0, 100% 100%, 0 100%);
+            clip-path: polygon(12.5% 0, 88.5% 0, 100% 100%, 0 100%);
+            transform: translateX(-2.9%);
         }
     }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -109,5 +132,6 @@
     width: 70%;
     @include media('>=desktop') {
         font-size: 16px;
+        margin-top: 9px;
     }
 }

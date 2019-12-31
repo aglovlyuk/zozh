@@ -3,13 +3,14 @@
     padding-bottom: 50px;
     @include media('>=desktop') {
         padding-top: 78px;
+        padding-bottom: 80px;
     }
 }
 
 .faq__ttl {
     margin-bottom: 28px;
     @include media('>=desktop') {
-        margin-bottom: 82px;
+        margin-bottom: 108px;
     }
 }
 
@@ -24,15 +25,19 @@
 }
 
 .faq-block__ttl {
-    padding: 28px 47px;
+    padding: 20px 55px 20px 47px;
     color: #666;
     font-weight: 500;
     font-size: 17px;
     width: 100%;
     position: relative;
     text-align: left;
+    display: flex;
+    min-height: 92px;
+    align-items: center;
     @include media('>=desktop') {
-        padding: 38px 47px;
+        min-height: 97px;
+        padding-right: 70px;
         font-size: 22px;
     }
     &[aria-expanded="true"] {
@@ -70,9 +75,9 @@
 
 .faq-block__content-row {
     padding-top: 28px;
-    padding-bottom: 28px;
+    padding-bottom: 18px;
     @include media('>=desktop') {
         padding-top: 38px;
-        padding-bottom: 38px;
+        padding-bottom: 28px;
     }
 }

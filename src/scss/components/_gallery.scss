@@ -9,8 +9,8 @@
     .slick-arrow {
         @include anim;
         @include ycenter;
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
         background-color: transparent;
         padding: 0;
         border: solid $cr-brand-secondary;
@@ -19,20 +19,23 @@
         overflow: hidden;
         z-index: 99;
         outline: none;
+        @include media('>=desktop') {
+            margin-top: -86px;
+        }
 
     }
     .slick-prev {
         left: 0;
-        transform: translateY(-50%) scale(1) rotate(45deg);
+        transform: translate(-5px, -50%) scale(1) rotate(45deg);
         &:hover {
-            transform: translateY(-50%) scale(1.1) rotate(45deg);
+            transform: translateY(-5px, -50%) scale(1.1) rotate(45deg);
         }
     }
     .slick-next {
         right: 0;
-        transform: translateY(-50%) scale(-1) rotate(45deg);
+        transform: translate(-18px, -50%) scale(-1) rotate(45deg);
         &:hover {
-            transform: translateY(-50%) scale(-1.1) rotate(45deg);
+            transform: translate(-18px, -50%) scale(-1.1) rotate(45deg);
         }
     }
 

@@ -29,6 +29,9 @@
 
 // Slick Carousel
 @import '~slick-carousel/slick/slick';
+// Countdown
+@import 'vendor/flipclock';
+
 
 @import "utils/utils";
 @import "utils/classes";
@@ -70,9 +73,11 @@
 .pp{
     position: absolute;
     pointer-events: none;
-    top: 4px;
+    top: 24px;
     left: 50%;
     opacity: .5;
     transform: translateX(-50%);
     z-index: 9999;
+
+    display: none;
 }

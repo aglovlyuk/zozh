@@ -12,34 +12,40 @@
 .about-me__visual {
     position: relative;
     z-index: 0;
+    @include media('>=desktop') {
+        margin: -22px 0 0 60px;
+    }
 }
 
 .about-me__bg-txt {
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 7px;
     z-index: -1;
     text-transform: uppercase;
     color: rgba($cr-brand-secondary, .2);
     font-size: 200px;
-    line-height: 1;
     font-weight: 900;
+    @include media('>=largescreen') {
+        left: -170px;
+    }
 }
 
 .about-me__list {
     @extend %listreset;
-    @include media('>=desktop') {
-        margin-top: 95px;
+    @include media('>=largescreen') {
+        margin: 93px 2vw 0 -10px;
     }
     li {
         position: relative;
         padding-left: 35px;
-        margin-bottom: 25px;
+        margin-bottom: 22px;
+        font-size: 20px;
         &:before {
             content: '';
             position: absolute;
             left: 0;
-            top: 0;
+            top: 6px;
             background: url(../img/svg-icons/check.svg) no-repeat;
             width: 25px;
             height: 25px;

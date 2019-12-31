@@ -5,16 +5,18 @@
         padding-top: 93px;
         padding-bottom: 102px;
     }
+    .counter__ttl {
+        @include media('>=desktop') {
+            margin-top: 77px;
+        }
+    }
 }
 
 .packages__ttl {
     margin-bottom: 50px;
     @include media('>=desktop') {
-        margin-bottom: 116px;
+        margin-bottom: 122px;
     }
-}
-
-.packages__row {
 }
 
 .package {
@@ -28,8 +30,8 @@
     }
     @include media('>=desktop') {
         border-radius: 10px;
-        padding: 46px 40px;
-        margin-bottom: 102px;
+        padding: 46px 40px 58px 50px;
+        margin-bottom: 20px;
     }
     &--middle {
         @include media('>=desktop') {
@@ -47,19 +49,24 @@
     margin-bottom: 10px;
     @include media('>=desktop') {
         font-size: 26px;
-        margin-bottom: 20px;
+        margin-bottom: 33px;
     }
 }
 
 .package__options {
     @extend %listreset;
+    @extend %clearfix;
     color: $cr-gray;
     font-size: 18px;
     font-weight: 400;
+    margin-bottom: 11px;
     li {
-        margin-bottom: 12px;
-        padding-left: 27px;
         position: relative;
+        padding-left: 27px;
+        margin-bottom: 21px;
+        @include media('>=desktop') {
+            margin-bottom: 21px;
+        }
         &.disabled {
             color: #c4c4c4;
             &:before {
@@ -73,11 +80,11 @@
             content: '';
             position: absolute;
             left: 0;
-            top: 6px;
+            top: 11px;
             background: url(../img/svg-icons/broccoli.svg) no-repeat;
             background-size: cover;
             width: 15px;
-            height: 13px;
+            height: 17px;
         }
     }
 }
@@ -86,12 +93,12 @@
     color: $cr-brand-secondary;
     font-size: 50px;
     font-weight: 900;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .pack__sale {
-    color: rgba(165, 59, 98, 0.5);
+    color: rgba($cr-brand-secondary, .5);
     font-size: 20px;
     font-weight: 900;
-    margin-bottom: 10px;
+    margin-bottom: 41px;
 }

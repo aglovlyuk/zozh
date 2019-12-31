@@ -8,30 +8,33 @@
     padding-bottom: 70px;
     @include media('>=desktop') {
         padding-top: 71px;
-        padding-bottom: 90px;
+        padding-bottom: 100px;
     }
 }
 
 .participation__ttl {
-    margin-bottom: 10px;
+    margin-bottom: 24px;
     color: currentColor;
 }
 
 .participation__time {
     text-transform: uppercase;
-    margin-bottom: 10px;
     color: $cr-brand-secondary;
     font-size: 24px;
     font-weight: 900;
+    margin-bottom: 40px;
+    @include media('>=desktop') {
+        margin-bottom: 61px;
+    }
 }
 
 .participation__content {
     position: relative;
-}
-
-.participation__content {
+    padding-top: 60px;
+    padding-bottom: 40px;
     @include media('>=desktop') {
-        padding-top: 120px;
+        padding-bottom: 87px;
+        padding-top: 60px;
     }
 }
 
@@ -48,44 +51,53 @@
     max-width: 370px;
     padding-left: 71px;
     &--1 {
-        left: 100px;
+        left: 170px;
         top: 0;
     }
     &--2 {
-        left: 0;
-        top: 230px;
+        left: 18px;
+        top: 175px;
     }
     &--3 {
         left: 20px;
-        top: 450px;
+        bottom: 211px;
     }
     &--4 {
-        right: 100px;
+        right: 251px;
         top: 0;
     }
     &--5 {
-        left: 230px;
+        left: 203px;
         bottom: 0;
     }
     &--6 {
-        right: 266px;
+        right: 250px;
         bottom: 0;
     }
     &--7 {
-        right: 56px;
-        bottom: 200px;
+        right: 40px;
+        bottom: 192px;
     }
     &--8 {
-        top: 230px;
-        right: 56px;
+        top: 175px;
+        right: 40px;
     }
 
     .icon {
         color: $cr-brand-secondary;
         font-size: 56px;
         position: absolute;
-        top: 10px;
+        top: 16px;
         left: 0;
+    }
+    .icon-members {
+        font-size: 48px;
+    }
+    .icon-curator {
+        font-size: 50px;
+    }
+    .icon-support {
+        font-size: 53px;
     }
 }
 

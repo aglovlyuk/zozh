@@ -1,11 +1,12 @@
 .reviews {
+    padding-top: 8px;
     padding-bottom: 92px;
 }
 
 .reviews__ttl {
     margin-bottom: 52px;
     @include media('>=desktop') {
-        margin-bottom: 76px;
+        margin-bottom: 83px;
     }
 }
 
@@ -13,6 +14,24 @@
     margin-bottom: 52px;
     @include media('>=desktop') {
         margin-bottom: 76px;
+    }
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 200px;
+        background: linear-gradient(to right, rgba(#fff, 1) 20%, rgba(#fff, 0) 100%);
+        pointer-events: none;
+        z-index: 10;
+    }
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+        transform: scale(-1);
     }
     .slick-arrow {
         @include anim;
@@ -31,16 +50,16 @@
     }
     .slick-prev {
         left: 0;
-        transform: translateY(-50%) scale(1) rotate(45deg);
+        transform: translate(28px, -50%) scale(1) rotate(45deg);
         &:hover {
-            transform: translateY(-50%) scale(1.1) rotate(45deg);
+            transform: translateY(28px, -50%) scale(1.1) rotate(45deg);
         }
     }
     .slick-next {
         right: 0;
-        transform: translateY(-50%) scale(-1) rotate(45deg);
+        transform: translate(-28px, -50%) scale(-1) rotate(45deg);
         &:hover {
-            transform: translateY(-50%) scale(-1.1) rotate(45deg);
+            transform: translate(-28px, -50%) scale(-1.1) rotate(45deg);
         }
     }
 

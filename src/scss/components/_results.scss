@@ -4,30 +4,35 @@
     padding-top: 57px;
     padding-bottom: 65px;
     @include media('>=desktop') {
-        padding-top: 71px;
+        padding-top: 69px;
         padding-bottom: 104px;
     }
-}
-
-.results__row {
 }
 
 .results__ttl {
     color: currentColor;
     margin-bottom: 30px;
     @include media('>=desktop') {
-        margin-bottom: 50px;
+        margin-bottom: 46px;
     }
 }
 
 .result-block {
     max-width: 267px;
     font-size: 1.25rem;
-    margin-bottom: 28px;
     .icon {
         display: block;
-        margin: 0 auto 17px;
+        margin: 0 auto 27px;
         font-size: 83px;
         color: rgba(#000, .4);
+    }
+    .icon-lock {
+        font-size: 72px;
+    }
+    .icon-medicine-chest {
+        font-size: 69px;
+    }
+    .icon-brain {
+        font-size: 87px;
     }
 }
