@@ -78,6 +78,7 @@
 .intro__sub-slogan {
     color: #fff;
     font-size: 35px;
+    line-height: 1.167;
     font-weight: 900;
     margin-bottom: 24px;
     @include media('>=desktop') {
@@ -109,8 +110,10 @@
     color: #fff;
     font-weight: 300;
     @include media('<desktop') {
-        margin-bottom: 45px;
         font-size: 15px;
+    }
+    @include media('<widescreen') {
+        margin-bottom: 45px;
     }
     @include media('>=desktop') {
         font-size: 18px;
