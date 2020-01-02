@@ -1,23 +1,26 @@
 .reviews {
     padding-top: 8px;
-    padding-bottom: 92px;
+    padding-bottom: 106px;
+    @include media('>=desktop') {
+        padding-bottom: 92px;
+    }
 }
 
 .reviews__ttl {
-    margin-bottom: 52px;
+    margin-bottom: 70px;
     @include media('>=desktop') {
         margin-bottom: 83px;
     }
 }
 
 .reviews-gallery {
+    position: relative;
     margin-bottom: 52px;
     @include media('>=desktop') {
         margin-bottom: 76px;
     }
     &:before,
     &:after {
-        content: '';
         position: absolute;
         top: 0;
         bottom: 0;
@@ -25,6 +28,9 @@
         background: linear-gradient(to right, rgba(#fff, 1) 20%, rgba(#fff, 0) 100%);
         pointer-events: none;
         z-index: 10;
+        @include media('>=desktop') {
+            content: '';
+        }
     }
     &:before {
         left: 0;
@@ -46,6 +52,10 @@
         overflow: hidden;
         z-index: 99;
         outline: none;
+        margin-top: -54px;
+        @include media('>=desktop') {
+            margin-top: -13px;
+        }
 
     }
     .slick-prev {

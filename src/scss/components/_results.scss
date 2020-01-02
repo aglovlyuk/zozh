@@ -17,17 +17,26 @@
     }
 }
 
+.results__row {
+    margin-bottom: 10px;
+    @include media('>=desktop') {
+        margin-bottom: 57px;
+    }
+}
+
 .result-block {
     font-size: 1.25rem;
-    max-width: 300px;
+    max-width: 267px;
     margin-left: auto;
     margin-right: auto;
-    @include media('>=tablet') {
-        max-width: 267px;
+    @include media('<tablet') {
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 0;
     }
     .icon {
         display: block;
-        margin: 0 auto 27px;
         font-size: 83px;
         color: rgba(#000, .4);
     }
@@ -39,5 +48,18 @@
     }
     .icon-brain {
         font-size: 87px;
+    }
+}
+
+.result-block__icon {
+    min-height: 78px;
+    margin-bottom: 49px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media('>=desktop') {
+        min-height: 87px;
+        margin-bottom: 21px;
     }
 }

@@ -5,7 +5,6 @@
             $bg-color-secondary
 ;
     padding-top: 51px;
-    padding-bottom: 70px;
     @include media('>=desktop') {
         padding-top: 71px;
         padding-bottom: 100px;
@@ -22,7 +21,7 @@
     color: $cr-brand-secondary;
     font-size: 24px;
     font-weight: 900;
-    margin-bottom: 40px;
+    margin-bottom: 22px;
     @include media('>=desktop') {
         margin-bottom: 61px;
     }
@@ -30,7 +29,6 @@
 
 .participation__content {
     position: relative;
-    padding-top: 60px;
     padding-bottom: 40px;
     @include media('<desktop') {
         padding-left: $side-gutters-sm;
@@ -58,6 +56,8 @@
     }
     @include media('<desktop') {
         margin-bottom: 20px;
+        padding-left: $side-gutters-sm * 2;
+        padding-right: $side-gutters-sm * 2;
     }
     @include media('>=desktop') {
         padding-left: 71px;
@@ -81,7 +81,7 @@
     }
     &--3 {
         @include media('>=desktop') {
-            left: 1.613%;
+            left: 2.3%;
             bottom: 211px;
         }
     }
@@ -91,7 +91,7 @@
             top: 0;
         }
         @include media('>=widescreen') {
-            right: 20.24%;
+            right: 22%;
         }
     }
     &--5 {
@@ -112,7 +112,7 @@
             right: 0;
         }
         @include media('>=widescreen') {
-            right: 3.23%;
+            right: 5.6%;
         }
     }
     &--8 {
@@ -121,18 +121,19 @@
             right: 0;
         }
         @include media('>=widescreen') {
-            right: 3.23%;
+            right: 5.63%;
         }
     }
 
     .icon {
         color: $cr-brand-secondary;
-        font-size: 56px;
+        font-size: 86px;
         @include media('<desktop') {
-            margin: 0 auto 28px;
+            margin: 0 auto 43px;
             display: block;
         }
         @include media('>=desktop') {
+            font-size: 56px;
             position: absolute;
             top: 16px;
             left: 0;

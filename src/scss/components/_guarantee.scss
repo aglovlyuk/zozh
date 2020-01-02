@@ -1,6 +1,5 @@
 .guarantee {
     padding-top: 59px;
-    padding-bottom: 40px;
     background-image: $bg-color-secondary;
     color: #fff;
     @include media('>=desktop') {
@@ -16,7 +15,7 @@
 }
 
 .guarantee__ttl {
-    margin-bottom: 42px;
+    margin-bottom: 21px;
     color: currentColor;
     @include media('>=desktop') {
         margin-bottom: 76px;
@@ -41,6 +40,7 @@
     margin-bottom: 50px;
     @include media('<desktop') {
         max-width: 70vw;
+        margin-top: 21px;
         margin-left: auto;
         margin-right: auto;
     }

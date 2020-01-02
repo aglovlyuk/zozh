@@ -50,7 +50,7 @@
 //@import "elements/badge";
 //@import "elements/tooltip";
 //@import "elements/dropdown";
-//@import "elements/modal-override";
+@import "elements/modal-override";
 
 @import "layout/layout";
 @import "layout/footer";
@@ -72,16 +72,3 @@
 @import "components/guarantee";
 @import "components/counter";
 @import "components/faq";
-@import "components/modal-custom";
-
-.pp{
-    position: absolute;
-    pointer-events: none;
-    top: 24px;
-    left: 50%;
-    opacity: .5;
-    transform: translateX(-50%);
-    z-index: 9999;
-
-    display: none;
-}

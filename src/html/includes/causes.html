@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10 causes-holder text-center">
                 <span class="causes__slogan">для <br> тебя!</span>
-                <img class="d-none d-md-block" src="uploads/img-cource.png" alt="">
+                <img class="d-none d-lg-inline" src="uploads/img-cource.png" alt="">
                 <div class="causes-block causes-block--1">
                     <svg class="causes-block__icon icon icon-figure"><use xlink:href="#icon-figure"></use></svg>
                     <p class="causes-block__txt">Не нравится твой вес и с ужасом наблюдаешь, как стрелка весов ползет выше</p>
@@ -45,7 +45,15 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="problems-circle__img">
-                            <img src="uploads/img-problems.png" alt="">
+                            <img
+                                class="solutions-complex__img"
+                                srcset="uploads/img-problems--sm.png 375w,
+                                        uploads/img-problems.png 763w"
+                                sizes="(max-width: 991px) 375px,
+                                        (min-width: 992px) 763px"
+                                src="uploads/img-problems.png"
+                                alt="Замкнутый круг">
+
                             <span class="problems-circle__factor problems-circle__factor--1">Переедание</span>
                             <span class="problems-circle__factor problems-circle__factor--2">Апатия и стресс факторы</span>
                             <span class="problems-circle__factor problems-circle__factor--3">Лишний вес и отсутствие сил</span>

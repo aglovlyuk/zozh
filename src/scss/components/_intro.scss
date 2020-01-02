@@ -1,6 +1,6 @@
 .intro {
     background: $bg-color-secondary;
-    padding-top: 54px;
+    padding-top: 43px;
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -56,26 +56,33 @@
 
 .start-date {
     color: $font-cr-tertiary;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 900;
     text-transform: uppercase;
+    @include media('>=desktop') {
+        font-size: 22px;
+    }
 }
 
 .intro__audience {
     color: $cr-brand-secondary;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     max-width: 310px;
     margin-bottom: 30px;
+    @include media('>=desktop') {
+        font-size: 18px;
+    }
 }
 
 .intro__sub-slogan {
     color: #fff;
     font-size: 35px;
     font-weight: 900;
-    margin-bottom: 38px;
+    margin-bottom: 24px;
     @include media('>=desktop') {
         font-size: 80px;
+        margin-bottom: 33px;
     }
 }
 
@@ -100,10 +107,13 @@
 
 .intro__text {
     color: #fff;
-    font-size: 18px;
     font-weight: 300;
     @include media('<desktop') {
         margin-bottom: 45px;
+        font-size: 15px;
+    }
+    @include media('>=desktop') {
+        font-size: 18px;
     }
 }
 

@@ -2,6 +2,7 @@
     background-image: $bg-color-secondary;
     padding-top: 60px;
     color: $font-cr-tertiary;
+    overflow: hidden;
 }
 
 .about-me__ttl {
@@ -17,9 +18,10 @@
     z-index: 0;
     @include media('<desktop') {
         width: 100%;
+        margin-top: 43px;
     }
     @include media('>=desktop') {
-        margin: -22px 0 0 60px;
+        margin: -22px 0 -45px 60px;
     }
     > img {
         @include media('<tablet') {
@@ -50,7 +52,8 @@
 .about-me__list {
     @extend %listreset;
     @include media('<tablet') {
-        padding-left: $side-gutters-sm * 2;
+        padding-left: 36px;
+        padding-right: 20px;
     }
     @include media('>=largescreen') {
         margin: 93px 2vw 0 -10px;
@@ -58,16 +61,23 @@
     li {
         position: relative;
         padding-left: 35px;
-        margin-bottom: 22px;
-        font-size: 20px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        @include media('>=desktop') {
+            font-size: 20px;
+            margin-bottom: 22px;
+        }
         &:before {
             content: '';
             position: absolute;
             left: 0;
-            top: 6px;
+            top: -2px;
             background: url(../img/svg-icons/check.svg) no-repeat;
             width: 25px;
             height: 25px;
+            @include media('>=desktop') {
+                top: 6px;
+            }
         }
     }
 }

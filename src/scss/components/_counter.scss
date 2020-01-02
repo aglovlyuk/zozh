@@ -1,6 +1,6 @@
 .counter--bg {
     .countdown-holder {
-        background: url(../img/arrows.png) no-repeat 50% 50%;
+        background: url(../img/arrows.png) no-repeat 25% 50%;
         background-size: auto 100%;
     }
 }
@@ -14,7 +14,6 @@
     margin-bottom: 10px;
     @include media('<tablet') {
         text-align: center;
-        margin-bottom: 80px;
     }
     @include media('>=desktop') {
         font-size: 40px;
@@ -29,7 +28,7 @@
     @extend %txt-gradient;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 23px;
     z-index: -1;
     color: rgba($cr-brand-secondary, .5);
     font-size: 23vw;
@@ -42,16 +41,23 @@
 
 .countdown-holder {
     position: relative;
-    min-height: 220px;
+    min-height: 178px;
     z-index: 0;
+    @include media('<widescreen') {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     @include media('>=widescreen') {
         min-height: 304px;
     }
 }
 
 .countdown {
-    @include xycenter;
     width: auto;
     display: flex;
-    margin: 0;
+    @include media('>=desktop') {
+        @include xycenter;
+        margin: 26px 0 0 -29px;
+    }
 }

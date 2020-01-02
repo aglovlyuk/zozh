@@ -2,13 +2,13 @@
     padding-top: 52px;
     padding-bottom: 80px;
     @include media('>=desktop') {
-        padding-top: 71px;
+        padding-top: 70px;
         padding-bottom: 67px;
     }
 }
 
 .programm__ttl {
-    margin-bottom: 34px;
+    margin-bottom: 54px;
     @include media('>=desktop') {
         margin-bottom: 64px;
     }
@@ -35,6 +35,11 @@
     @include media('>=desktop') {
         padding: 32px 54px;
         font-size: 26px;
+    }
+    &[aria-expanded="true"] {
+        &:after {
+            transform: rotate(90deg) translateX(-50%) scaleX(-1);
+        }
     }
     &:after {
         content: '';
@@ -69,13 +74,13 @@
         background-color: rgba($cr-gray, .3);
         height: 1px;
         right: 40px;
-        top: 0;
+        top: 5px;
     }
 }
 
 .programm-block__content-row {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 36px;
+    padding-bottom: 30px;
     @include media('>=desktop') {
         padding-top: 43px;
         padding-bottom: 67px;
@@ -96,25 +101,36 @@
 
 .programm-block__content-ttl {
     color: $cr-brand-secondary;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     @include media('>=desktop') {
         margin-bottom: 56px;
+        font-size: 22px;
     }
 }
 
 .programm-block__list {
     @extend %listreset;
     color: $cr-gray;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.25;
     margin-right: -10px;
+    @include media('<desktop') {
+        padding-left: 9px;
+    }
+    @include media('>=desktop') {
+        font-size: 18px;
+    }
     li {
-        margin-bottom: 17px;
-        padding-left: 38px;
+        margin-bottom: 13px;
+        padding-left: 30px;
         position: relative;
+        @include media('>=desktop') {
+            padding-left: 38px;
+            margin-bottom: 17px;
+        }
         &:before {
             content: '';
             background: url(../img/svg-icons/y-tube.svg) no-repeat;
