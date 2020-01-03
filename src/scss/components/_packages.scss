@@ -5,11 +5,6 @@
         padding-top: 93px;
         padding-bottom: 102px;
     }
-    .counter__ttl {
-        @include media('>=desktop') {
-            margin-top: 77px;
-        }
-    }
     .countdown-holder {
         @include media('<tablet') {
             margin-left: -$side-gutters-sm;

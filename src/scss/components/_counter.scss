@@ -1,7 +1,10 @@
 .counter--bg {
     .countdown-holder {
-        background: url(../img/arrows.png) no-repeat 25% 50%;
+        background: url(../img/arrows.png) no-repeat 50% 50%;
         background-size: auto 100%;
+        @include media('>=tablet') {
+            background-position: 25% 50%;
+        }
     }
 }
 
@@ -11,13 +14,12 @@
     font-weight: 900;
     color: $cr-gray;
     text-transform: uppercase;
-    margin-bottom: 10px;
     @include media('<tablet') {
+        margin-bottom: 10px;
         text-align: center;
     }
     @include media('>=desktop') {
         font-size: 40px;
-        margin-bottom: 18px;
     }
     @include media('>=widescreen') {
         font-size: 60px;
@@ -58,6 +60,6 @@
     display: flex;
     @include media('>=desktop') {
         @include xycenter;
-        margin: 26px 0 0 -29px;
+        margin-left: -29px;
     }
 }

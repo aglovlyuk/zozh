@@ -32,6 +32,9 @@
     @include media('<tablet') {
         margin-bottom: 10px;
     }
+    @include media('<largescreen') {
+        margin-bottom: 20px;
+    }
     p {
         margin-bottom: 0;
     }
@@ -58,7 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include media('>=desktop') {
+    @include media('>=tablet') {
         min-height: 87px;
         margin-bottom: 21px;
     }
