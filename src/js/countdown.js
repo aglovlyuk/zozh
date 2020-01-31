@@ -6,7 +6,7 @@ $(function() {
 
     $('.js-countdown').each(function () {
         var currentDate = new Date();
-        var futureDate  = new Date(currentDate.getFullYear(), 0, 5);
+        var futureDate  = new Date(currentDate.getFullYear(), 1, 2);
         var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
         clock = $(this).FlipClock(diff, {
