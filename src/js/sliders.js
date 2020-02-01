@@ -8,7 +8,6 @@ $(function() {
         mobileFirst: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        adaptiveHeight: true,
         arrows: true,
         dots: false,
         responsive: [
