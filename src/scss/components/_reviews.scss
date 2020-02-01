@@ -19,6 +19,9 @@
     @include media('>=desktop') {
         margin-bottom: 76px;
     }
+    &:not(.slick-initialized) {
+        display: flex;
+    }
     &:before,
     &:after {
         position: absolute;
@@ -83,11 +86,10 @@
 
     .slick-dots {
         @extend %listreset;
-        @include xcenter;
-        bottom: 15px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 20px;
 
         li {
             margin: 0 3px;
@@ -109,6 +111,10 @@
 
 .reviews-gallery__slide {
     text-align: center;
+    @include media('>=tablet') {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .review__cta {

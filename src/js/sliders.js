@@ -8,6 +8,7 @@ $(function() {
         mobileFirst: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        adaptiveHeight: true,
         arrows: true,
         dots: false,
         responsive: [
@@ -31,6 +32,26 @@ $(function() {
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    $(".js-review-slider").slick({
+        mobileFirst: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        arrows: false,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    dots: false
                 }
             }
         ]

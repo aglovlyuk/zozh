@@ -85,6 +85,9 @@
 }
 
 .team-gallery {
+    &:not(.slick-initialized) {
+        display: flex;
+    }
     @include media('>=desktop') {
         padding-left: 27px;
         padding-right: 27px;
